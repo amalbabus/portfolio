@@ -1,0 +1,23 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+
+<h1 id="blogtitle" class="font-weight-bold text-center">My Blogs</h1>
+
+<h3 class="text-center mb-5">Amal has written {{ blogobjects.count }} blog{{ blogobjects.count|pluralize }}</h3>
+
+{% for obj in blogobjects  %}
+    <div class="row justify-content-center my-3">
+     <div class="col-md-10">
+
+   <a href="{% url 'blog:detail' obj.id %}"> <h2>{{ obj.blog_title }}</h2></a>
+   <h5 class="text-muted"> {{ obj.blog_time| date:'d M Y' }}</h5>
+    <h4>{{ obj.blog_description|striptags|truncatechars:100 }}</h4>
+</div>
+</div>
+{% endfor %}
+
+
+
+{% endblock content %}
+
