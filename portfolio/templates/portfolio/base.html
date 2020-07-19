@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&display=swap" rel="stylesheet"> 
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,9 +16,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="{% static "portfolio/Logo.png" %}">
+  <link rel="icon" type="image/png" href="{% static "portfolio/index.png" %}">
 
-  <title>Amal</title>
+  <title>Escapades</title>
 </head>
 
 
@@ -26,30 +27,32 @@
 
     <nav id="topNav" class="navbar navbar-expand-md navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'indexpage' %}">
-          <img src="{% static "portfolio/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
-          <span>Amal Babu S</span>
+        <a id="logo" class="navbar-brand" href="{% url 'indexpage' %}">
+          <img src="{% static "portfolio/Escapades-PNG.png" %}" width="50" height="50" class="d-inline-block align-center" alt="Nick's Logo">
+          <span>Escapades</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        
+         
+       
         <div class="collapse navbar-collapse text-center" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="{% static "portfolio/AmalBabuS_Resume.pdf" %}">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.facebook.com/amalbabus33" target="_blank">Facebook</a>
+              <a class="nav-link" href="https://www.facebook.com/anandu.raj.180" target="_blank">Facebook</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.instagram.com/amal_babu_s_/" target="_blank">Instagram</a>
+              <a class="nav-link" href="https://www.instagram.com/sesky_sanyaasi/" target="_blank">Instagram</a>
             </li>
-            <li>
-              <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Blog</a>
-            </li>
+            
           </ul>
         </div>
       </div>
+      <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">കുറിപ്പുകൾ</a>
     </nav>
 
 

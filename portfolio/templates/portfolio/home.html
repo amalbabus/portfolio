@@ -5,15 +5,29 @@
     {% load static %}
     <div class="row justify-content-center my-3">
         <div class="col-5">
-          <img src="{% static 'portfolio/Prithviraj.jpeg' %}" class="img-fluid">
+          <img  src="{% static 'portfolio/index.png' %}" class="img-fluid">
         </div>
       </div>
 
 
       <div class="row justify-content-center mb-3">
         <div class="col-md-9 text-center">
-          <h5 id="hometext" class="font-weight-bold">Prithviraj Sukumaran is an Indian film actor, director, producer and distributor known for his works primarily in the Malayalam cinema. 😊</h5>
-        </div>
+          <style>
+             .blink_me {
+           animation: blinker 3s linear infinite;
+            }
+
+        @keyframes blinker {
+            50% {
+         opacity: 0;
+        }
+          }
+          </style>
+    
+    <div class="blink_me"> <h5 id="hometext" class="font-weight-bold">എന്റെ മനസ്സൊരു നാടകവേദിയാണ്.. പഴയ ഓര്മകളും  ചരിത്രങ്ങളും എപ്പോഴും കളിച്ചുകൊണ്ടിരിക്കുന്ന നാടകവേദി.....</h5></div>
+      
+    
+      </div>
       </div>
 
 
@@ -36,6 +50,23 @@
 
   </div>
   {% endfor %}
+  <div class="col-lg-4 col-md-6">
+    <h3>Send me a Message</h3>
+  <form method="POST">
+    <label for="id_name">Name {{ form.name }}</label>
+    <label for="id_email">Email {{ form.email }}</label>
+    
+
+    <label for="id_message">
+    Message  <textarea name="message" id="id_message" required="" cols="40" rows="5" maxlength="100"></textarea>
+ 
+    </label>
+   
+    {% csrf_token %}
+
+  <input type="submit" class = 'btn btn-primary' value="Send">
+  </form>
+</div>
 </div>
 
 {% endblock %}

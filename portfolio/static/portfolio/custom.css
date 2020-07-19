@@ -8,15 +8,21 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    background-image: url('https://cdn.inspirationhut.net/wp-content/uploads/2013/05/201.png');
 }
 
 #blogtitle {
     font-size: 6rem;
 }
 
+#logo {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: x-large;
+}
+
 @media (min-width: 992px) {
     #hometext {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     #blogdetailtitle {
         font-size: 5rem;
